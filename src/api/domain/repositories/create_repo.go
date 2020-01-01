@@ -14,7 +14,7 @@ type CreateRepoRequest struct {
 func (r *CreateRepoRequest) Validate() errors.ApiError {
 	r.Name = strings.TrimSpace(r.Name)
 	if r.Name == "" {
-		return  errors.NewBadRequestError("invalid respository name")
+		return  errors.NewBadRequestError("invalid repository name")
 	}
 	return nil
 }
